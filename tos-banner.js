@@ -1,6 +1,7 @@
 setTimeout(function(){
   var policyVersion = 1;
-  if (window.localStorage && localStorage.getItem("AgreedToPolicyVersion")==policyVersion) return;  window.policy_banner_accept = function(){
+  if (window.localStorage && localStorage.getItem("AgreedToPolicyVersion")==policyVersion) return;
+  window.policy_banner_accept = function(){
     localStorage.setItem("AgreedToPolicyVersion",policyVersion);
     var e = document.getElementById('PolicyBanner');
     e.parentNode.removeChild(e);
